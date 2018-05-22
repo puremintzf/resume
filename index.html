@@ -33,14 +33,23 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+	<link rel="stylesheet" href="css/popuo-box.css" type="text/css" media="all" />
     <!-- ===========================
     字体和图标
     =========================== -->
     <link href='http://fonts.googleapis.com/css?family=Kristi|Alegreya+Sans:300' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	
 
-
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<script type="application/x-javascript"> 
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0); 
+			}, false); 
+		function hideURLbar(){ 
+			window.scrollTo(0,1); 
+			} 
+	</script>
     <!--[if IE]>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
@@ -71,12 +80,12 @@
                                 var a2a_config = a2a_config || {};
                                 a2a_config.linkname = "Minimal CV by EvenFly";
                                 a2a_config.num_services = 6;
-                                a2a_config.prioritize = ["QQ", "weibo", "wechat", "linkedin", "google_plus", "email"];
+                                a2a_config.prioritize = ["weibo", "wechat", "email"];
                             </script>
                             <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
                             <!-- AddToAny END -->
 
-                            <a class="btn btn-success" href=""><span class="fa fa-download"></span> 下载</a>
+                            <a class="btn btn-success" href="file/zf-20180522-resume.doc"><span class="fa fa-download"></span> 下载</a>
                         </div>
                     </div>
                     <h2>Java开发/系统运维</h2>
@@ -92,7 +101,7 @@
                             </li>
                             <li><a href=""><span class="social fa fa-skype"></span>+86 13094808743</a>
                             </li>
-                            <li><a href="mailto:linkme@puremint.cn" target="_blank"><span class="social fa fa-envelope-o"></span>linkme@puremint.cn</a>
+                            <li><a href="mailto:linkme@puremint.cn" target="_blank"><span class="social fa fa-envelope-o"></span>me@puremint.cn</a>
                             </li>
                         </ul>
                     </div><!-- social 1st col end-->
@@ -101,10 +110,15 @@
                         <ul class="list-unstyled">
                             <li><a href="http://www.weibo.com/zhangfanlovexue" target="_blank"><span class="social fa fa-weibo"></span>weibo</a>
                             </li>
-                            <li><a href=""><span class="social fa fa-wechat"></span>wechat</a>
-                            </li>
+                          <li><a class="play-icon popup-with-zoom-anim"
+						href="#small-dialog"><span class="glyphicon glyphicon-picture"
+							aria-hidden="true"></span>WeChat</a></li>
                             <li><a href=""><span class="social fa fa-qq"></span>QQ</a>
                             </li>
+							
+							<div id="small-dialog" class="mfp-hide">
+								<img src="img/wechat.png" alt="" />
+							</div>
                         </ul>
                     </div><!-- social 2nd col end-->
 					<!-- 
@@ -138,12 +152,9 @@
                 <div class="col-sm-11">
                     <h3>个人简述 </h3>
                     <p>
-						我是...
+						自己性格平和开朗，待人热忱，善于与人沟通协调，亲和力强，具有进取精神和团队精神，有较强的动手能力。 学习注重理论与实践的结合，己具备了相当的社会实践操作能力，有很强的事业心和责任感，能够面对任何困难和挑战。
 					</p>
 
-                    <p>
-						然后...
-					</p>
 
                     <p class="signature">zhangfan </p>
                 </div><!--info end-->
@@ -165,7 +176,7 @@
                             <p class="sub">
 								<a href="http://xinxi.sdau.edu.cn/" target="_blank">Computer Science And Technology</a>
                             </p>
-                            <p>山东农业大学，然后...</p>
+                            <p>2017年毕业于山东农业大学，计算机科学与技术专业</p>
                         </div>
 
                         <div class="year col-md-3">
@@ -218,7 +229,9 @@
                             <h4>山东众阳软件有限公司</h4>
                             <p class="sub"><a href="http://www.msunsoft.com" target="_blank">Msunsoft Ltd</a>
                             </p>
-                            <p>就职于北京众阳部门，从事医疗软件行业开发，主要项目有济医附院药物审核系统、入院服务中心管理系统、院长管理驾驶舱等软件。</p>
+                            <p>
+							就职于北京众阳部门，主要从事医疗软件行业开发，主要项目有济医附院药物审核系统、入院服务中心管理系统、院长管理驾驶舱等软件	使用的主要J2EE框架有Struts、Spring、ibatis等，数据库是用的是oracle数据库。药物审核系统又称作审方系统，主要是通过设置好的验证规则对医生下的医嘱和处方进行审核。入院管理中心系统主要是实现了一个入院的提前预约包括入院的办理、空床位的查询等。院长驾驶舱通过查询数据中心的数据，对医院每日、每周、每月的指标数据进行查询，帮助院长、主任还有护士长了解当前科室的运行状况。
+							</p>
                         </div>
 
                         <div class="year col-md-3">
@@ -234,11 +247,13 @@
                             <h4>潍坊中财信信息科技股份有限公司</h4>
                             <p class="sub"><a href="http://www.wfzcx.com/" target="_blank">CIFT-WEIFANG</a>
                             </p>
-                            <p>就职于研发部门，主要从事潍坊市一体化财政业务系统的开发和升级改造。</p>
+                            <p>就职于研发部门，主要从事潍坊市一体化财政业务系统的2.0开发和升级改造。
+							金财工程支撑平台，采用了SpringMVC等主流框架，集合了阿里巴巴的Dubbo，通过搭建基础框架，调用远程服务来实现基础框架与各个业务系统的数据交换。子业务系统有预算管理、指标管理、集中支付、政府采购、代理人员考试系统、综合查询、平台运维管理等产品。
+							</p>
                         </div>
 
                         <div class="year col-md-3">
-                            <p>2006-2008</p>
+                            <p>2017.07- now</p>
                         </div>
                     </div>
 					<!--Job 2 end-->
@@ -306,18 +321,21 @@
 
                     <div class="award">
                         <h4>个人博客</h4>
-                        <p class="sub"><a href="https://www.puremint.cn/" target="_blank">puremint博客</a></p>
-                        
+                        <p class="sub"><a href="https://www.puremint.cn/" target="_blank">博客</a></p>
+                    </div>
+					
+					<div class="award">
+                        <h4>南关中学教师考评系统</h4>
+                        <p class="sub"><a href="http://puremint.cn:8080/" target="_blank">南关考评系统</a></p>
                     </div>
                     <!--1st award end-->
 
                     <div class="award">
                         <h4>潍坊星友电梯有限公司</h4>
                         <p class="sub"><a href="http://www.xingyoulift.com/" target="_blank">星友电梯</a></p>
-                      
                     </div><!--1st award end-->
+					
                 </div><!--awards end-->
-
             </div>
             
             <hr>
@@ -334,7 +352,7 @@
                         <blockquote>
                             <p>111</p>
                         </blockquote>
-                        <img src="img/" alt="">
+                        <img src="img/1.png" alt="">
                         <h4>222</h4>
                         <p>333</p>
                     </div><!--1st testimonial end-->
@@ -343,7 +361,7 @@
                         <blockquote>
                             <p>444</p>
                         </blockquote>
-                        <img src="img/" alt="">
+                        <img src="img/1.png" alt="">
                         <h4>555</h4>
                         <p>666</p>
                     </div><!--2nd testimonial end-->
@@ -352,7 +370,7 @@
                         <blockquote>
                             <p>777</p>
                         </blockquote>
-                        <img src="img/" alt="">
+                        <img src="img/1.png" alt="">
                         <h4>888</h4>
                         <p>999</p>
                     </div><!--3rd testimonial end-->
@@ -371,8 +389,8 @@
     </footer>
 
     <!--necessary scripts and plugins-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/evenfly.js"></script>
 </body>
